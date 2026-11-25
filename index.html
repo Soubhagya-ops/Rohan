@@ -1,50 +1,87 @@
-Afterglow
-FacilitiesPackagesLocationsBook
-Book a service
-A gentle goodbye, arranged in minutes.
-Choose a package, pick your city and see the exact price. Our coordinators take care of rites, venue, transport and paperwork, day or night.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Afterglow – Funeral booking, handled with care</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
 
-See packagesTalk to a coordinator
-24/7Response in 15 min
-6Cities served
-12,400+Families supported
-In loving memory
-Every detail, held with dignity
-Live price₹0Traditional · Kolkata
-Next availableToday, 4:30 PMCoordinator assigned instantly
-Everything the day needs, under one roof
-Each facility is staffed by trained professionals and can be added to any package.
+<nav><div class="glass">
+  <a href="#top" class="logo"><svg width="30" height="30" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7c6cf0"/><stop offset="1" stop-color="#5fd3c4"/></linearGradient></defs><circle cx="20" cy="20" r="19" fill="none" stroke="url(#lg)" stroke-width="2"/><path d="M20 30c-6-3-9-8-9-13 4 0 7 2 9 5 2-3 5-5 9-5 0 5-3 10-9 13z" fill="url(#lg)"/><circle cx="20" cy="11" r="2.4" fill="#f2c27b"/></svg>Afterglow</a>
+  <div class="links"><a href="#facilities">Facilities</a><a href="#packages">Packages</a><a href="#locations">Locations</a><a href="#book">Book</a></div>
+  <a href="#book" class="btn">Book a service</a>
+</div></nav>
 
-Five packages, one clear price
-Prices adjust to the city you choose, covering local venue, permit and transport costs.
+<main id="top" class="wrap">
+  <div class="hero">
+    <div>
+      <h1>A gentle goodbye, <em>arranged in minutes.</em></h1>
+      <p>Choose a package, pick your city and see the exact price. Our coordinators take care of rites, venue, transport and paperwork, day or night.</p>
+      <div class="row"><a href="#packages" class="btn">See packages</a><a href="#book" class="btn ghost">Talk to a coordinator</a></div>
+      <div class="trust"><div><b>24/7</b>Response in 15 min</div><div><b>6</b>Cities served</div><div><b>12,400+</b>Families supported</div></div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="pane glass p1"><div>
+        <svg width="120" height="120" viewBox="0 0 120 120" aria-hidden="true"><defs><radialGradient id="g1"><stop stop-color="#f2c27b" stop-opacity=".9"/><stop offset="1" stop-color="#f2c27b" stop-opacity="0"/></radialGradient><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7c6cf0"/><stop offset="1" stop-color="#5fd3c4"/></linearGradient></defs><circle cx="60" cy="60" r="58" fill="url(#g1)"/><circle cx="60" cy="60" r="38" fill="none" stroke="url(#g2)" stroke-width="2"/><path d="M60 88c-18-9-27-24-27-39 12 0 21 6 27 15 6-9 15-15 27-15 0 15-9 30-27 39z" fill="url(#g2)" opacity=".9"/><circle cx="60" cy="30" r="5" fill="#f2c27b"/></svg>
+        <h3 style="font-size:26px;margin-top:10px">In loving memory</h3><small style="color:var(--mute)">Every detail, held with dignity</small></div></div>
+      <div class="pane glass p2"><small><span class="dot"></span>Live price</small><strong id="heroPrice">₹0</strong><small id="heroMeta">Traditional · Kolkata</small></div>
+      <div class="pane glass p3"><small>Next available</small><strong>Today, 4:30 PM</strong><small>Coordinator assigned instantly</small></div>
+    </div>
+  </div>
 
-City
-Rites
-Cremation
-Reserve your service
-Share a few details. A coordinator will call to confirm within 15 minutes.
+  <section id="facilities">
+    <div class="head"><h2>Everything the day needs, under one roof</h2><p>Each facility is staffed by trained professionals and can be added to any package.</p></div>
+    <div class="grid g4" id="fac"></div>
+  </section>
 
-Your name
-Full name
-Phone number
-+91
-Package
-City
-Preferred date
-dd-mm-yyyy
-Expected guests
-50
-Add-ons
-Your plan
-Estimated total₹0
-Confirm booking
-No payment now. Final price is confirmed on the call.
+  <section id="packages">
+    <div class="head"><h2>Five packages, one clear price</h2><p>Prices adjust to the city you choose, covering local venue, permit and transport costs.</p></div>
+    <div class="bar">
+      <div class="sel"><label for="city">City</label><select id="city"></select></div>
+      <div class="sel"><label for="type">Rites</label><select id="type"><option value="1">Cremation</option><option value="1.12">Burial</option><option value="1.2">Both (two-stage)</option></select></div>
+      <p class="note" id="cnote" style="margin:18px 0 0"></p>
+    </div>
+    <div class="grid packs" id="packs"></div>
+  </section>
 
-Where we serve
-Own prayer halls, crematoriums and burial grounds in every city.
+  <section id="book">
+    <div class="head"><h2>Reserve your service</h2><p>Share a few details. A coordinator will call to confirm within 15 minutes.</p></div>
+    <div class="book">
+      <div class="glass form">
+        <div class="fg">
+          <div class="f"><label for="nm">Your name</label><input id="nm" placeholder="Full name"></div>
+          <div class="f"><label for="ph">Phone number</label><input id="ph" inputmode="tel" placeholder="+91"></div>
+          <div class="f"><label for="pk">Package</label><select id="pk"></select></div>
+          <div class="f"><label for="ct">City</label><select id="ct"></select></div>
+          <div class="f"><label for="dt">Preferred date</label><input id="dt" type="date"></div>
+          <div class="f"><label for="gs">Expected guests</label><input id="gs" type="number" min="5" max="500" value="50"></div>
+          <div class="f full"><label>Add-ons</label><div class="add" id="adds"></div></div>
+        </div>
+      </div>
+      <aside class="glass sum" aria-live="polite">
+        <h3>Your plan</h3>
+        <div id="lines"></div>
+        <div class="tot"><span class="note">Estimated total</span><b id="total">₹0</b></div>
+        <button class="btn" style="width:100%" id="go">Confirm booking</button>
+        <p class="note" style="margin:12px 0 0">No payment now. Final price is confirmed on the call.</p>
+      </aside>
+    </div>
+  </section>
 
-Need help right now?
-Call our 24/7 line and a coordinator will take over from the first minute.
+  <section id="locations">
+    <div class="head"><h2>Where we serve</h2><p>Own prayer halls, crematoriums and burial grounds in every city.</p></div>
+    <div class="grid cities" id="cities"></div>
+  </section>
 
-Call 1800-000-000
-© 2026 Afterglow Funeral Services. Prices are indicative and include taxes. Demo website.
+  <section style="padding-top:20px"><div class="glass cta"><h2>Need help right now?</h2><p class="note" style="font-size:17px;margin:0 0 22px">Call our 24/7 line and a coordinator will take over from the first minute.</p><a class="btn" href="tel:+911800000000">Call 1800-000-000</a></div></section>
+</main>
+<footer><div class="wrap">© 2026 Afterglow Funeral Services. Prices are indicative and include taxes. Demo website.</div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
